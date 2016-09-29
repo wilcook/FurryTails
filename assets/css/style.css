@@ -1,0 +1,101 @@
+html, body, a {
+  box-sizing: border-box;
+	height: 100%,
+	margin: 0,
+	padding: 0;
+	font-family: 'Coming Soon', cursive;
+	font-size: 16pt;
+	color: #272316;
+	font-weight: bold;
+}
+
+
+#menu {
+  background-color: transparent;
+  color: #272316;
+  float: right;
+}
+
+#dropdown1 
+  background-color: transparent;
+}
+
+#regBoxWrap {
+  z-index: 2;
+  height: 500px;
+  width: 500px;
+  text-align: center;
+}
+
+#regBox, #loginBox {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #d5cdb6;
+  opacity: 0.7;
+  padding: 10px;
+  max-height: 700px;
+}
+
+  /* label focus color */
+   .input-field input[type=text]:focus + label {
+  background-color: #d5cdb6;
+   }
+
+nav, #leftPanel {
+/*  background-color: transparent;*/
+	background-color: #d5cdb6;
+
+}
+
+.btn {
+  font-size: 10pt;
+  background-color: #a3915f;
+  color: #977757;
+}
+
+#fontLogo {
+	height: 140px;
+/*  vertical-align: bottom;*/
+}
+
+
+#leftPanel {
+	height: 100%;
+}
+
+      #map {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: -1;
+      }
+
+      #submitBtn, #regBtn {
+      	background-color: #a3915f;
+      	color: #977757;
+      }
+
+      #breedInput, #zip {
+      	color: #977757;
+      	font-family: 'Unica One', cursive;
+
+      }
+
+#label {
+  font-size: 12pt;
+  color: #977757;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #977757;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #977757;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #977757;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #977757;
+}
