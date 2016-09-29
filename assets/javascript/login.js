@@ -5,10 +5,10 @@ $('document').ready(function() {
     $("#loginBox").hide();
 
 
-    $("login").on('click', function() {
+    $("#login").on('click', function() {
         console.log("login click recognized");
+        $("#regBox").hide();
         $("#loginBox").show();
-
 
         // login on click closing bracket
     });

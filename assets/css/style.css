@@ -6,7 +6,7 @@ html, body, a {
 	font-family: 'Coming Soon', cursive;
 	font-size: 16pt;
 	color: #272316;
-	font-weight: bold;
+	font-weight: normal;
 }
 
 
@@ -14,6 +14,7 @@ html, body, a {
   background-color: transparent;
   color: #272316;
   float: right;
+  width: 100px;
 }
 
 #dropdown1 
@@ -34,7 +35,10 @@ html, body, a {
   background-color: #d5cdb6;
   opacity: 0.7;
   padding: 10px;
-  max-height: 700px;
+}
+
+#regBox {
+  min-height: 600px;
 }
 
   /* label focus color */
@@ -50,8 +54,9 @@ nav, #leftPanel {
 
 .btn {
   font-size: 10pt;
-  background-color: #a3915f;
-  color: #977757;
+  background-color: #977757;
+  color: #272316;
+  font-weight: bold;
 }
 
 #fontLogo {
@@ -72,8 +77,8 @@ nav, #leftPanel {
       }
 
       #submitBtn, #regBtn {
-      	background-color: #a3915f;
-      	color: #977757;
+      	background-color: ##977757;
+      	color: #272316;
       }
 
       #breedInput, #zip {
