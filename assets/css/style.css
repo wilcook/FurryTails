@@ -55,6 +55,8 @@ a {
 #fontLogo {
     height: 140px;
     vertical-align: bottom;
+    float: left;
+    z-index: 5;
 }
 #leftPanel {
     height: 100%;

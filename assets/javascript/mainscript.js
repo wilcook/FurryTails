@@ -266,10 +266,13 @@ function initMap(latitude, longitude) {
 
     map = new google.maps.Map(document.getElementById("map"), googleMapOptions);
 
-    var marker = new google.maps.Marker({
-        position: myLatLng,
-        map: map
-    });
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: 'Dog Paw',
+          animation: google.maps.Animation.DROP,
+          icon: dogPaw,
+          draggable: false});
 
 }
 
