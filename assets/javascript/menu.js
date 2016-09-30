@@ -1,3 +1,5 @@
+$("document").ready(function(){
+  console.log("menu.js is loaded");
 
   $('.dropdown-button').dropdown({
       inDuration: 300,
@@ -9,3 +11,4 @@
       alignment: 'left' // Displays dropdown with edge aligned to the left of button
     }
   );
+})

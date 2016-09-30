@@ -11,14 +11,14 @@ firebase.auth().onAuthStateChanged(function(user) {
 
                 database.ref().push({
                 	animalSpecies: animalSpecies,
-                	animalName: animalName,
-                	animalBreed: animalBreed,
-                	animalSex: animalSex,
-                	animalPic: animalPictures[0].urlSecureFullsize,
-                	animmalPhone: locationPhone,
-                	animalLocationName: locationName,
-                	animalAddress: locationAddress,
-                	animalCityState: animalLocationCitystate,
+                	animalName: animalName.animalName,
+                	animalBreed: animalName.animalBreed,
+                    animalGeneralAge: animalName.animalGeneralAge,
+                	animalSex: animalName.animalSex,
+                	animalPic: animalName.animalPictures[0].urlSecureFullsize,
+                	animmalPhone: animalName.locationPhone,
+                    animalLocationName: animalName.locationName,
+                 	animalCityState: animalName.animalLocationCitystate,
                     uid: user.uid,
                     time_stamp: dbTimeStamp
                 });
