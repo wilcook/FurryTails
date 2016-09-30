@@ -12,6 +12,7 @@ $('document').ready(function() {
     $("#login").on('click', function() {
         console.log("login click recognized");
         $("#regBox").hide();
+        $("#leftPanel").hide();
         $("#loginBox").show();
 
 

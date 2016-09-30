@@ -1,13 +1,3 @@
-/*body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-}
-
-main {
-    flex: 1 0 auto;
-}*/
-
 html,
 body,
 a {
@@ -19,142 +9,99 @@ a {
     font-weight: normal;
 }
 
-#landingdiv {
-    float: right;
-    text-align: center;
-    z-index: -1;
-}
-
 #menu {
-    z-index: 110;
     background-color: transparent;
     color: #272316;
     float: right;
     width: 100px;
+    z-index: 500;
 }
 
 #dropdown1 {
     background-color: transparent;
 }
-
 #regBoxWrap {
-    z-index: 110;
+    height: 500px;
+    width: 500px;
     text-align: center;
+    margin-top: -300%;
 }
-
-
+#logo {
+    vertical-align: bottom;
+    float: right;
+}
 #regBox,
 #loginBox {
-    z-index: 110;
-/*    display: inline-block;*/
+    position: absolute;
     margin-left: auto;
     margin-right: auto;
     background-color: #d5cdb6;
-        opacity: 0.7;
+    opacity: 0.7;
     padding: 10px;
 }
-
 #regBox {
     min-height: 600px;
 }
 
-
 /* label focus color */
-
 .input-field input[type=text]:focus + label {
     background-color: #d5cdb6;
 }
-
 .btn {
     font-size: 10pt;
     background-color: #977757;
     color: #272316;
     font-weight: bold;
 }
-
 #fontLogo {
     height: 140px;
     vertical-align: bottom;
     float: left;
-    z-index: 5;
 }
-
 #leftPanel {
     height: 100%;
-    background-color: transparent;
-    opacity: 0.8;
     width: 30%;
-    float: left;
-    z-index: 110;
+    position: absolute;
+    z-index: 100;
 }
-
 #map {
     height: 100%;
-/*    margin-left: 30%;*/
+    margin-left: 30%;
     width: 70%;
     position: absolute;
-/*    z-index: 100;*/
+    z-index: 200;
 }
-
-button,
 #submitBtn,
 #regBtn {
     background-color: ##977757;
     color: #272316;
-    font-size: 12pt;
 }
-
 #breedInput,
 #zip {
     color: #977757;
     font-family: 'Unica One', cursive;
 }
-
 #label {
     font-size: 12pt;
     color: #977757;
 }
-
 ::-webkit-input-placeholder {
     /* Chrome/Opera/Safari */
-    font-size: 12pt;
+    font-weight: normal;
     color: #977757;
 }
-
 ::-moz-placeholder {
     /* Firefox 19+ */
-    font-size: 12pt;
+    font-weight: normal;
     color: #977757;
 }
-
 :-ms-input-placeholder {
     /* IE 10+ */
-    font-size: 12pt;
+    font-weight: normal;
     color: #977757;
 }
-
 :-moz-placeholder {
     /* Firefox 18- */
-    font-size: 12pt;
+    font-weight: normal;
     color: #977757;
-}
-
-
-#landingpara {
-    width: 60%;
-    margin-left: 20%;
-    margin-right: 25%;
-    text-align: justify;
-}
-
-#landingimg {
-    border-radius: 50px;
-    text-align: center;
-}
-
-#pawprint {
-    clear: both;
-    text-align: center;
-    margin-right: 20%;
-    color: darkred;
 }

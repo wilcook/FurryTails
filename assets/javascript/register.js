@@ -66,6 +66,7 @@ $('document').ready(function() {
     $("#register").on('click', function() {
         console.log("register click recognized");
         $("#loginBox").hide();
+        $("#leftPanel").hide();
         $("#regBox").show();
 
 
@@ -75,6 +76,7 @@ $('document').ready(function() {
     ///////////////////////////////////////////////////////////////////////////////////////////////
     // on click event for regBtn button
     $("#regBtn").on('click', function() {
+        $("#regBox").hide();
 
         // console log click event
         console.log("regBtn button click recognized");
@@ -110,7 +112,7 @@ $('document').ready(function() {
         $.when(createAccount).done(checkAuth());
         $.when(checkAuth).done(updateAccount(uName));
         return false;
-        $("#regBox").hide();
+
         // regBtn on click closing brackets
     });
 
