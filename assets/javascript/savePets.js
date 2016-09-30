@@ -2,44 +2,38 @@ console.log("savePets.js is loaded");
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
 
-        $(".iw_title").on('click', function() {
+        $("#saveAnimal").on('click', function() {
+            console.log("saveAnimal click funciton recognized");
 
-            $(".iw_content").append('<p>Save this record?</p><br><button id="yesSave">Yes</button><button id="noSave">No</button>');
+            database.ref().push({
+                animalSpecies: animalName.animalSpecies,
+                animalName: animalName.animalName,
+                animalBreed: animalName.animalBreed,
+                animalGeneralAge: animalName.animalGeneralAge,
+                animalSex: animalName.animalSex,
+                animalPic: animalName.animalPictures[0].urlSecureFullsize,
+                animmalPhone: animalName.locationPhone,
+                animalLocationName: animalName.locationName,
+                animalCityState: animalName.animalLocationCitystate,
+                uid: user.uid,
+                time_stamp: dbTimeStamp
+            });
 
-            $("#yesSave").on('click', function() {
-                console.log("yesSave click funciton recognized");
+            console.log("========================================");
+            console.log("uid: " + user.uid);
+            console.log("animalName: " + animalName);
+            console.log("animalBreed: " + animalBreed);
+            console.log("animalSex: " + animalSex);
+            console.log("animapPic: " + animalPictures[0].urlSecureFullsize)
+            console.log("animalLocationName: " + locationName);
+            console.log("animalAddress: " + locationAddress);
+            console.log("animalCityState: " + animalLocationCitystate);
+            console.log("animalPhone: " + locationPhone);
+            console.log("========================================")
 
-                database.ref().push({
-                	animalSpecies: animalSpecies,
-                	animalName: animalName.animalName,
-                	animalBreed: animalName.animalBreed,
-                    animalGeneralAge: animalName.animalGeneralAge,
-                	animalSex: animalName.animalSex,
-                	animalPic: animalName.animalPictures[0].urlSecureFullsize,
-                	animmalPhone: animalName.locationPhone,
-                    animalLocationName: animalName.locationName,
-                 	animalCityState: animalName.animalLocationCitystate,
-                    uid: user.uid,
-                    time_stamp: dbTimeStamp
-                });
+            return false;
+        })
 
-                console.log("========================================");
-                console.log("uid: " + user.uid);
-                console.log("animalName: " + animalName);
-                console.log("animalBreed: " + animalBreed);
-                console.log("animalSex: " + animalSex);
-                console.log("animapPic: " + animalPictures[0].urlSecureFullsize)
-                console.log("animalLocationName: " + locationName);
-                console.log("animalAddress: " + locationAddress);
-                console.log("animalCityState: " + animalLocationCitystate);
-                console.log("animalPhone: " + locationPhone);
-                console.log("========================================")
-
-                return false;
-            })
-
-            // on pet info map tag click function closing bracket
-        });
 
         // if argument closing brackets
     }
