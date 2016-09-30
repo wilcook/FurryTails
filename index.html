@@ -12,11 +12,6 @@
 </head>
 
 <body>
-    <!--     <nav>
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo right black-text"><img src="assets/images/furrytailsfontlogov2.png" id="fontLogo" alt="fontlogo"></a>
-    </div>
-  </nav> -->
     <div class="row">
         <div class="col s3 right">
             <a href="#" id="menu" data-activates="dropdown1" class="dropdown-button waves-effect waves-light circle" data-beloworigin="true"><i class="medium material-icons">menu</i></a>
@@ -37,14 +32,20 @@
                 <div>
                     <div class="input-group">
                         <input id='breedInput' placeholder="Breed" class='form-control' type="text">
-                        <input type="text" id="zip" class="form-control" placeholder="Zip Code">
+                        <input type="text" id="zipInput" class="form-control" placeholder="Zip Code">
                         <span class="input-group-btn">
          <input id="submitBtn" type="submit" class="btn-info btn input-group"></input> 
         </span>
                     </div>
                     <br>
-                    <div class="youtube panel-body text-center">
-                    </div>
+                    <p>
+                        <span id="adoptedPetsCount"></span>
+                    </p>
+                    <br>
+                    <p>
+                        <div class="youtube panel-body text-center">
+                        </div>
+                    </p>
                 </div>
             </div>
         </div>
@@ -151,17 +152,19 @@
     <!-- end of registration form -->
     <!--  -->
     <!--  -->
+            <a id="logo" href="#"><img src="assets/images/furrytailsfontlogov2.png" id="fontLogo" alt="fontlogo"></a>
     <!-- javascript links -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/lodash/4.16.2/lodash.min.js"></script>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
-    <script src="youtube.js" type="text/javascript"></script>
+    <script src="assets/javascript/youtube.js" type="text/javascript"></script>
     <script src="http://s3.amazonaws.com/filestore.rescuegroups.org/scripts/noncvs/jquery-json.js" type="text/javascript"></script>
     <script src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDrt3-isQtycN-cNj4VLUyucAURQOaqoTc&callback=initMap"></script>
     <script src="assets/javascript/firebase.js" type="text/javascript"></script>
     <script src="assets/javascript/fbaseAuthObserver.js" type="text/javascript"></script>
-    <script src="assets/javascript/map.js" type="text/javascript"></script>
+    <script src="assets/javascript/mainscript.js" type="text/javascript"></script>
     <script src="assets/javascript/menu.js" type="text/javascript"></script>
     <script src="assets/javascript/searchAnimal.js" type="text/javascript"></script>
     <script src="assets/javascript/login.js" type="text/javascript"></script>

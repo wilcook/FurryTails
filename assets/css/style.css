@@ -28,6 +28,11 @@ html, body, a {
   text-align: center;
 }
 
+#logo {
+  vertical-align: bottom;
+  float: right;
+}
+
 #regBox, #loginBox {
   display: inline-block;
   margin-left: auto;
@@ -46,11 +51,6 @@ html, body, a {
   background-color: #d5cdb6;
    }
 
-nav, #leftPanel {
-/*  background-color: transparent;*/
-	background-color: #d5cdb6;
-
-}
 
 .btn {
   font-size: 10pt;
@@ -61,7 +61,7 @@ nav, #leftPanel {
 
 #fontLogo {
 	height: 140px;
-/*  vertical-align: bottom;*/
+  vertical-align: bottom;
 }
 
 

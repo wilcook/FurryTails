@@ -1,19 +1,3 @@
-//When user presses submit button, stores user input in a variable and 
-$('#submitBtn').on('click', function(){
-	breedInput = $('#breedInput').val().trim();
-	zipInput = $('#zipInput').val().trim();
-
-	console.log(breedInput);
-	console.log(zipInput);
-	//make an API call to youtube for a video with the breedInput as query keyword
-	youtubeQuery();
-	//make an API call to geocod.io with to translate the user's zip code into latitude & longitude co-ordinates
-	zipCodeQuery();
-	//make an API call to rescuegroups.org with user's zip code (zipInput)
-	rescueGroupsQuery();
-});
-
-
 //Places an ajax call to youtube API
 function youtubeQuery(){
 	//breedInput is user's entry in the text field

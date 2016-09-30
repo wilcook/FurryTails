@@ -47,7 +47,7 @@ $("#loginBtn").on('click', function(){
 	  }
 });
 	return false;
-
+	$("#loginBox").hide();
 // login on click closing brackets
 });
 
