@@ -1,5 +1,5 @@
 console.log("savePets.js is loaded");
-$('footer').hide;
+$('#saved').hide;
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
 
@@ -74,7 +74,8 @@ if(recUserID == userID){
 
 // append to dashboard
 $("#saved").append(
-    '<td id="recName">' 
+	'<div id="saved" class="panel-body"><table id="petRecs" class="table"><tr><th>Name</th><th>Picture</th><th>Species</th><th>Phone</th><th>Location</th><th>City and State</th></tr></table></div>'
+    + '<td id="recName">' 
     + recName
     + ' </td><td id="recPic">' 
     + recPic
@@ -100,5 +101,4 @@ $("#saved").append(
 // auth state listener closing bracket
 });
 
-    })
-});
+    });

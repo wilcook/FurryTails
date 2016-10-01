@@ -1,13 +1,3 @@
-/*body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-}
-
-main {
-    flex: 1 0 auto;
-}*/
-
 html,
 body,
 a {
@@ -19,43 +9,37 @@ a {
     font-weight: normal;
 }
 
-#landingdiv {
-    float: right;
-    text-align: center;
-    z-index: -1;
-}
+
+/*iframe {
+    height: 360px;
+    width: 320px;
+}*/
 
 #menu {
-    z-index: 110;
     background-color: transparent;
     color: #272316;
     float: right;
     width: 100px;
+    z-index: 500;
 }
 
 #dropdown1 {
     background-color: transparent;
 }
 
-#regBoxWrap {
-    z-index: 110;
-    text-align: center;
+#boxWrap {
+    height: 100%;
+    width: 30%;
+    position: fixed;
 }
 
-
-#regBox,
-#loginBox {
-    z-index: 110;
-/*    display: inline-block;*/
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #d5cdb6;
-        opacity: 0.7;
-    padding: 10px;
-}
-
+#loginBox,
 #regBox {
-    min-height: 600px;
+    height: 100%;
+    background-color: #d5cdb6;
+    opacity: 0.7;
+    padding: 10px;
+    z-index: 100;
 }
 
 
@@ -76,32 +60,34 @@ a {
     height: 140px;
     vertical-align: bottom;
     float: left;
-    z-index: 5;
 }
 
 #leftPanel {
     height: 100%;
-    background-color: transparent;
-    opacity: 0.8;
     width: 30%;
-    float: left;
-    z-index: 110;
+    position: absolute;
+    z-index: 100;
+    padding: 10px;
 }
 
 #map {
     height: 100%;
-/*    margin-left: 30%;*/
+    margin-left: 30%;
     width: 70%;
     position: absolute;
-/*    z-index: 100;*/
+    z-index: 200;
 }
 
-button,
+#saveAnimal,
 #submitBtn,
-#regBtn {
-    background-color: ##977757;
+#regBtn, 
+#loginBtn,
+#forgot {
+    font-size: 10pt;
+    background-color: #977757;
     color: #272316;
-    font-size: 12pt;
+    font-weight: bold;
+    margin: 3px;
 }
 
 #breedInput,
@@ -117,44 +103,24 @@ button,
 
 ::-webkit-input-placeholder {
     /* Chrome/Opera/Safari */
-    font-size: 12pt;
+    font-weight: normal;
     color: #977757;
 }
 
 ::-moz-placeholder {
     /* Firefox 19+ */
-    font-size: 12pt;
+    font-weight: normal;
     color: #977757;
 }
 
 :-ms-input-placeholder {
     /* IE 10+ */
-    font-size: 12pt;
+    font-weight: normal;
     color: #977757;
 }
 
 :-moz-placeholder {
     /* Firefox 18- */
-    font-size: 12pt;
+    font-weight: normal;
     color: #977757;
-}
-
-
-#landingpara {
-    width: 60%;
-    margin-left: 20%;
-    margin-right: 25%;
-    text-align: justify;
-}
-
-#landingimg {
-    border-radius: 50px;
-    text-align: center;
-}
-
-#pawprint {
-    clear: both;
-    text-align: center;
-    margin-right: 20%;
-    color: darkred;
 }
