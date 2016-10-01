@@ -1,5 +1,12 @@
 $('document').ready(function() {
 
+    var fName;
+    var lName;
+    var uName;
+    var email;
+    var password;
+    var anyCriteria = [];
+
     //console log that index is calling register.js
     console.log("register.js is loaded")
         //////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -69,25 +76,21 @@ $('document').ready(function() {
         $("#leftPanel").hide();
         $("#regBox").show();
 
-
         //closing brackets for register menu item on click event 
     });
 
     ///////////////////////////////////////////////////////////////////////////////////////////////
     // on click event for regBtn button
     $("#regBtn").on('click', function() {
-        $("#regBox").hide();
+        // grabs registration form fields
+        fName = $("#fName").val().trim().toString();
+        lName = $("#lName").val().trim().toString();
+        uName = $("#uName").val().trim().toString();
+        email = $("#email").val().trim().toString();
+        password = $("#password").val().trim().toString();
 
         // console log click event
         console.log("regBtn button click recognized");
-
-        // grabs registration form fields
-        var fName = $("#fName").val().trim().toString();
-        var lName = $("#lName").val().trim().toString();
-        var uName = $("#uName").val().trim().toString();
-        var email = $("#email").val().trim().toString();
-        var password = $("#password").val().trim().toString();
-        var anyCriteria = [];
 
         // pushes field input holding variables to array anyCriteria
         anyCriteria.push(fName, lName, uName, email, password);
@@ -111,6 +114,8 @@ $('document').ready(function() {
         createAccount(email, password);
         $.when(createAccount).done(checkAuth());
         $.when(checkAuth).done(updateAccount(uName));
+        $("#regBox").hide();
+
         return false;
 
         // regBtn on click closing brackets

@@ -3,6 +3,7 @@ var breedInput;
 var zipInput;
 //initializing the variable for the google map
 var map;
+var geocoder;
 
 $("#leftPanel").hide();
 
@@ -86,6 +87,12 @@ function displayYoutube(data) {
 }
 
 function userZipCodeQuery() {
+
+    // geocoder = new google.maps.Geocoder();
+    // console.log("geocoder: " + geocoder);
+    // ///////////////////////////////////////////////////////////////////
+    // purgatory for geocodio api
+    // ///////////////////////////////////////////////////////////////////
     var userZip = zipInput;
     //Geocodio API
     var APIkey = '41f7717db2f1efa7b2deeb857e44e25574d55e5';
@@ -102,9 +109,10 @@ function userZipCodeQuery() {
         latitude = response.results[0].location.lat;
         longitude = response.results[0].location.lng;
         console.log("geocod.io ajax call ran")
-        //calls function that displays google map
+        // calls function that displays google map
         initMap(latitude, longitude);
     });
+    // ///////////////////////////////////////////////////////////////////
 }
 
 //This function is called by rescueGroupsQuery()
@@ -150,7 +158,7 @@ function rescueGroupsQuery() {
         "search": {
             "calcFoundRows": "Yes",
             "resultStart": 0,
-            "resultLimit": 10,
+            "resultLimit": 5,
             //Properties of each pet that the query returns
             "fields": ["animalName",
                 "animalSpecies",
@@ -308,12 +316,12 @@ function addMarker(location, petinfo) {
     // map =  google.maps.Map(document.getElementById("map")); don't need this?
     // var mytext = 'Infowindow contents in HTML'
     // var myinfowindow = new google.maps.InfoWindow({
-    // 	content: mytext
+    //  content: mytext
     // });
 
     //Places a pawprint marker for each pet on the map
     var myLatLng = { lat: location.lat, lng: location.lng };
-    console.log('location: ' + location.lat + ' ' + location.lng);
+    // console.log('location: ' + location.lat + ' ' + location.lng);
     // alert('hi'); this works
     var contentString = '<img width="100px" src = "' +
         petinfo.petphoto + '">' +

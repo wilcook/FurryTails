@@ -8,8 +8,8 @@
 
         firebase.auth().onAuthStateChanged(function(user) {
             if (user) {
-            	$("#item1").html('<li><a  id="savedPets" href="#!">Saved Pets</a></li>');
-            	$("#item2").html('<li><a  id="logout" href="#!">Logout</a></li>');
+            	$("#item1").html('<li><a id="savedPets" href="#!">Saved Pets</a></li>');
+            	$("#item2").html('<li><a id="logout" href="#!">Logout</a></li>');
 
                 // User is signed in.
                 console.log(user + " is signed in.");
@@ -24,7 +24,7 @@
                 console.log("uid: " + uid);
 
             } else {
-            	$("#item1").html('<li><a  id="login" href="#!">Login</a></li>');
+            	$("#item1").html('<li><a id="login" href="#!">Login</a></li>');
             	$("#item2").html('<li><a id="register" href="#!">Register</a></li>');
                 console.log("No one is signed in.")
             }
