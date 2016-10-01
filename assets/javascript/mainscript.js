@@ -23,6 +23,7 @@ $("#dog").on('click', function() {
     $("#leftPanel").show();
     $("#loginBox").hide();
     $("#regBox").hide();
+    $("#saved").hide();
 });
 
 $("#cat").on('click', function() {
@@ -32,6 +33,7 @@ $("#cat").on('click', function() {
     $("#leftPanel").show();
     $("#loginBox").hide();
     $("#regBox").hide();
+    $("#saved").hide();
 });
 
 //When user presses submit button, stores user input in a variable and 

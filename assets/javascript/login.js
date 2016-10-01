@@ -72,13 +72,13 @@ $('document').ready(function() {
 
 
 
-        this.onAuth('onComplete', function(authData) {
-            if (authData) {
-                console.log("Authenticated with uid:", authData.uid);
-            } else {
-                console.log("Client unauthenticated.")
-            }
-        });
+        // this.onAuth('onComplete', function(authData) {
+        //     if (authData) {
+        //         console.log("Authenticated with uid:", authData.uid);
+        //     } else {
+        //         console.log("Client unauthenticated.")
+        //     }
+        // });
         return false;
 
         // login on click closing brackets

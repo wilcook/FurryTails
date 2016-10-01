@@ -9,7 +9,9 @@ a {
     font-weight: normal;
 }
 
-
+#saved{
+    z-index: 300;
+}
 /*iframe {
     height: 360px;
     width: 320px;
@@ -68,6 +70,7 @@ a {
     position: absolute;
     z-index: 100;
     padding: 10px;
+    text-align: center;
 }
 
 #map {
